@@ -19,19 +19,17 @@ class SplashScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              /// 🌸 Flower Icon
               const Icon(
-                Icons.local_florist, // Flower icon
+                Icons.local_florist, 
                 size: 50,
                 color: Colors.white,
               ),
               const SizedBox(height: 16),
 
-              /// 🏷 Tagline with White Background
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                 decoration: BoxDecoration(
-                  color: Colors.white, // White background
+                  color: Colors.white, 
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: const Text(
@@ -39,7 +37,7 @@ class SplashScreen extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w500,
-                    color: Colors.black, // Black text color
+                    color: Colors.black, 
                     fontFamily: 'Poppins',
                   ),
                 ),
@@ -51,3 +49,4 @@ class SplashScreen extends StatelessWidget {
     );
   }
 }
+
