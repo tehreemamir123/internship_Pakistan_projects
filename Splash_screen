@@ -1,0 +1,53 @@
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import '../../../controller/splashcontroller.dart';
+
+class SplashScreen extends StatelessWidget {
+  const SplashScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final SplashController controller = Get.put(SplashController());
+    return Scaffold(
+      backgroundColor: Colors.green,
+      appBar: AppBar(
+        title: const Text("My First Flutter App"),
+      ),
+      body: Container(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              /// 🌸 Flower Icon
+              const Icon(
+                Icons.local_florist, // Flower icon
+                size: 50,
+                color: Colors.white,
+              ),
+              const SizedBox(height: 16),
+
+              /// 🏷 Tagline with White Background
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                decoration: BoxDecoration(
+                  color: Colors.white, // White background
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: const Text(
+                  'simple.fast.flutter',
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.black, // Black text color
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
