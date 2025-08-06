@@ -1,0 +1,53 @@
+import 'package:flutter/material.dart';
+
+class HabitTileScreen extends StatelessWidget {
+  const HabitTileScreen ({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        title: const Text("My Interests"),
+        centerTitle: true,
+        backgroundColor: Colors.blue,
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: ListView(
+          children: const [
+            ListTile(
+              leading: Icon(Icons.book, color: Colors.blue),
+              title: Text("Reading",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
+            ),
+            Divider(),
+            ListTile(
+              leading: Icon(Icons.videogame_asset, color: Colors.green),
+              title: Text("Gaming",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
+            ),
+            Divider(),
+            ListTile(
+              leading: Icon(Icons.restaurant_menu, color: Colors.orange),
+              title: Text("Cooking",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
+            ),
+            Divider(),
+            ListTile(
+              leading: Icon(Icons.self_improvement, color: Colors.purple),
+              title: Text("Yoga",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
+            ),
+            Divider(),
+            ListTile(
+              leading: Icon(Icons.brush, color: Colors.red),
+              title: Text("Drawing",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
